@@ -11,4 +11,13 @@ import Foundation
 struct Student: Codable {
     var name: String
     var course: String
+    
+    
+    var firstName: String {
+        return String(name.split(separator: " ").first ?? "")
+    }
+    
+    var lastNAme: String {
+        return String(name.split(separator: " ").last ?? "")
+    }
 }
